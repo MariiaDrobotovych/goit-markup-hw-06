@@ -775,6 +775,10 @@ footer .address {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.social-links-footer {
+  margin-right: 93px;
+}
+
 .address-bottom .address {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -825,7 +829,6 @@ footer .address {
 
 footer .container {
   display: flex;
-  justify-content: space-between;
 }
 
 .address-bottom {
@@ -838,7 +841,7 @@ footer .container {
 
 .footer-form {
   display: flex;
-  align-items: flex-end;
+
   justify-content: space-between;
   width: 570px;
   height: 86px;
@@ -854,7 +857,7 @@ footer .container {
   font-weight: 700;
 }
 
-.footer-input {
+.footer-form .footer-input {
   display: block;
   width: 358px;
   height: 50px;
