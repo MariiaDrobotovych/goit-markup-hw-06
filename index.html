@@ -368,11 +368,13 @@
 
     <footer>
       <div class="container">
-        <div class="footer-address">
-          <a href="./index.html" class="logo link" target="_blank"><span class="logo-start">Web</span><span
-              class="logo-end">Studio</span></a>
-          <div class="footer-container">
+       
             <address class="address-bottom">
+              <div class="footer-address">
+                <a href="./index.html" class="logo link" target="_blank"><span class="logo-start">Web</span><span
+                    class="logo-end">Studio</span></a>
+              </div>
+
               <ul class="address list">
                 <li class="address-list">
                   <a href="https://goo.gl/maps/NCRkNM8AswAMd2es7" class="address-start link" target="_blank">г. Киев, пр-т Леси
@@ -386,6 +388,7 @@
                 </li>
               </ul>
             </address>
+
             <div class="social-links-footer">
               <strong class="phrase">присоединяйтесь</strong>
               <div class="sl-footer">
@@ -411,15 +414,16 @@
                 </a>
               </div>
             </div>
-          </div>
-        </div>
 
-        <form action="#" class="footer-form">
-            <label class="footer-form-phrase">подпишитесь на рассылку</label>
-
-            <input type="text" class="footer-input">
-        </form>
-
+            <form action="#" class="footer-form">
+              <div class="form-field">
+                <strong class="footer-form-phrase">подпишитесь на рассылку</strong>
+                <input type="text" class="footer-input" placeholder="E-mail">
+              </div>
+            
+            <button type="submit" class="footer-btn">Подписаться</button>
+            
+            </form>
       </div>
     </footer>
 
@@ -430,6 +434,38 @@
               <use href="./images/sprite-svg/sprite-modal.svg#icon-vector"></use>
             </svg>
         </button>
+
+        <form action="#" class="form-modal">
+          <h2 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+          <div class="form-field">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" name="name" id="name">
+          </div>
+
+          <div class="form-field">
+            <label for="tel" class="form-label">Телефон</label>
+            <input type="tel" name="tel" id="tel">
+          </div>
+
+          <div class="form-field">
+            <label for="mail" class="form-label">Почта</label>
+            <input type="mail" name="mail" id="mail">
+          </div>
+
+          <div class="form-field">
+            <label for="comment" class="form-label">Комментарий</label>
+            <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+          </div>
+
+          <div class="form-field-accept">
+            <input id="accept" name="accept" type="checkbox" value="yes" />
+            <label for="accept">Соглашаюсь с рассылкой и принимаю <span class="conditionals">Условия договора</span></label>
+          </div>
+
+          <button type="submit" class="modal-btn">Отправить</button>
+          
+        </form>
       </div>
     </div>
 
