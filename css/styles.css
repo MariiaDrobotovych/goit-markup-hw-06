@@ -296,6 +296,7 @@ nav {
 }
 
 .form-modal .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -311,21 +312,36 @@ nav {
   color: var(--main-text);
 }
 
-.form-field:not(:last-child) {
+.form-modal .form-field:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.form-field input {
+.form-modal .form-field input {
   display: block;
   width: 448px;
   height: 40px;
+  padding: 14px 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
 }
 
-.form-field:focus {
+.form-modal .form-field:focus input {
   border: 1px solid #2196f3;
+}
+
+.form-modal .modal-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: var(--text-title);
+}
+
+.form-field:focus-within .modal-icon {
+  fill: var(--text-accent);
 }
 
 textarea {
@@ -412,6 +428,22 @@ textarea::placeholder {
   letter-spacing: 0.03em;
 
   color: var(--text-title);
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.form-field-accept label::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  background-image: url(/images/sprite-svg/check.svg);
 }
 
 .modal-btn {
@@ -749,6 +781,8 @@ footer .logo {
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 20px;
+
+  font-style: normal;
 }
 
 footer .address {
@@ -841,10 +875,14 @@ footer .container {
 
 .footer-form {
   display: flex;
-
+  align-items: flex-end;
   justify-content: space-between;
   width: 570px;
   height: 86px;
+}
+
+.footer-form .form-field {
+  margin-bottom: 0;
 }
 
 .footer-form-phrase {
@@ -859,27 +897,39 @@ footer .container {
 
 .footer-form .footer-input {
   display: block;
+  padding: 15px 16px;
   width: 358px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--secondary-bg-color);
   border-radius: 4px;
 }
 
 .footer-btn {
+  position: relative;
   width: 200px;
   height: 50px;
-  padding: 10px 28px;
+  padding: 10px 62px 10px 29px;
 
   background-color: var(--text-accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
   color: var(--main-bg-color);
+}
+
+.footer-form .footer-icon {
+  position: absolute;
+  right: 28px;
+  top: 13px;
+  width: 24px;
+  height: 24px;
+  fill: var(--main-bg-color);
 }

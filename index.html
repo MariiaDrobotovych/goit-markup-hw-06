@@ -417,11 +417,15 @@
 
             <form action="#" class="footer-form">
               <div class="form-field">
-                <strong class="footer-form-phrase">подпишитесь на рассылку</strong>
+                <label class="footer-form-phrase">подпишитесь на рассылку</label>
                 <input type="text" class="footer-input" placeholder="E-mail">
               </div>
             
-            <button type="submit" class="footer-btn">Подписаться</button>
+            <button type="submit" class="footer-btn">Подписаться
+              <svg class="footer-icon">
+                <use href="./images/sprite-svg/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
             
             </form>
       </div>
@@ -431,7 +435,7 @@
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>
             <svg>
-              <use href="./images/sprite-svg/sprite-modal.svg#icon-vector"></use>
+              <use href="./images/sprite-svg/sprite.svg#icon-vector"></use>
             </svg>
         </button>
 
@@ -441,16 +445,31 @@
           <div class="form-field">
             <label for="name" class="form-label">Имя</label>
             <input type="text" name="name" id="name">
+            <div>
+              <svg class="modal-icon">
+                <use href="./images/sprite-svg/sprite.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label for="tel" class="form-label">Телефон</label>
             <input type="tel" name="tel" id="tel">
+            <div>
+              <svg class="modal-icon">
+                <use href="./images/sprite-svg/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label for="mail" class="form-label">Почта</label>
             <input type="mail" name="mail" id="mail">
+            <div>
+              <svg class="modal-icon">
+                <use href="./images/sprite-svg/sprite.svg#icon-email"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
@@ -459,7 +478,7 @@
           </div>
 
           <div class="form-field-accept">
-            <input id="accept" name="accept" type="checkbox" value="yes" />
+            <input id="accept" name="accept" type="checkbox" value="yes" class="checkbox"/>
             <label for="accept">Соглашаюсь с рассылкой и принимаю <span class="conditionals">Условия договора</span></label>
           </div>
 
