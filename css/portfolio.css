@@ -368,6 +368,7 @@ footer .logo {
 
 footer .address {
   padding-left: 0px;
+  display: block;
 }
 
 .address-list:not(:last-child) {
@@ -464,6 +465,7 @@ footer .container {
 
 .footer-form .form-field {
   margin-bottom: 0;
+  margin-right: 12px;
 }
 
 .footer-form-phrase {
