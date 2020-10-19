@@ -327,7 +327,13 @@ nav {
   cursor: pointer;
 }
 
-.form-modal .form-field:focus input {
+.form-field input,
+.form-field textarea {
+  outline: none;
+}
+
+.form-modal .form-field input:focus,
+.form-modal .form-field textarea:focus {
   border: 1px solid #2196f3;
 }
 
@@ -368,25 +374,20 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field-accept {
+.form-field-policy {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.form-field-accept label {
+.form-field-policy label {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
 
   color: var(--main-text);
-}
-
-.form-field-accept .conditionals {
-  text-decoration-line: underline;
-  color: var(--text-accent);
 }
 
 .is-hidden .modal {
@@ -430,7 +431,7 @@ textarea::placeholder {
   color: var(--text-title);
 }
 
-.checkbox {
+.form-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -438,12 +439,26 @@ textarea::placeholder {
   position: absolute;
 }
 
-.form-field-accept label::after {
+.policy-label::before {
   content: "";
-  display: block;
+  display: inline-block;
   width: 16px;
   height: 15px;
+  margin-right: 7px;
+  border-radius: 2px;
+  background-image: url(/images/sprite-svg/not-check.svg);
+}
+
+.form-field-policy .policy-doc {
+  color: var(--text-accent);
+}
+
+.form-checkbox:checked + .policy-label::before {
   background-image: url(/images/sprite-svg/check.svg);
+  background-size: content;
+  background-origin: border-box;
+  border-radius: 2px;
+  background-color: var(--text-accent);
 }
 
 .modal-btn {
