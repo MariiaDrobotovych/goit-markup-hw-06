@@ -446,7 +446,7 @@ textarea::placeholder {
   height: 15px;
   margin-right: 7px;
   border-radius: 2px;
-  background-image: url(./images/sprite-svg/not-check.svg);
+  background-image: url(../images/sprite-svg/not-check.svg);
 }
 
 .form-field-policy .policy-doc {
@@ -454,7 +454,7 @@ textarea::placeholder {
 }
 
 .form-checkbox:checked + .policy-label::before {
-  background-image: url(./images/sprite-svg/check.svg);
+  background-image: url(../images/sprite-svg/check.svg);
   background-size: content;
   background-origin: border-box;
   border-radius: 2px;
